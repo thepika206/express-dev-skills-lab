@@ -9,3 +9,5 @@ const skills = [
 export { 
 	skills
 }
+
+console.log('end of skill-data file');
