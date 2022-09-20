@@ -10,4 +10,4 @@ export {
 	skills
 }
 
-console.log('end of skill-data file');
+console.log('data/skill-data.js connected');

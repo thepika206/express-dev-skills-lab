@@ -11,4 +11,4 @@ export {
   index
 }
 
-console.log('skill ctrl');
+console.log('controllers/skill.js connected');
