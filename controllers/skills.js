@@ -13,9 +13,15 @@ function index (req, res) {
     res.redirect('/')
   })
 }
+function newSkill (req, res) {
+  res.render('skills/new')
+}
+
+
 
 export {
-  index
+  index,
+  newSkill as new
 }
 
 console.log('controllers/skill.js connected');
