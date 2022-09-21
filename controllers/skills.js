@@ -5,7 +5,7 @@ function index (req, res) {
   Skill.find({})
   .then(skills => {//skills rep the result of the query
     res.render('skills/index', {
-      skills: skills,
+      skills: skills, title: 'Express Dev Skills'
     })
   })
   .catch(error => {//if there's an error console.log it and redirect home
