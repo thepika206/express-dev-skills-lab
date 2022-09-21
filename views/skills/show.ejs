@@ -7,15 +7,15 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>New Express Developer Skill</h1>
+  <h1>Express Developer Skills</h1>
   <p>
     <a href="/skills">Skills</a> > 
-    New Skill
+    Details
   </p>
-  <form action="/skills/create" method="POST" autocomplete="off">
-    <label for="new-skill">What is the new skill?</label>
-    <input id="new-skill" type="text" name="name">
-    <button type="submit">Save Skill</button>
-  </form>
+  <p>
+    <a href="/skills/<%= skill._id %>"><%= skill.name %></a>
+    -
+    <%= skill.acquired ? "Acquired" : "Not Acquired" %>
+  </p>
 </body>
 </html>
