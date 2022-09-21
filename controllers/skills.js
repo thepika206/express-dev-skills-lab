@@ -17,11 +17,20 @@ function newSkill (req, res) {
   res.render('skills/new')
 }
 
+function create (req,res){
+  Skill.create(req.body)
+  .then(skill =>{
+    res.redirect('/skills')
+  })
+  .catch(error => {//if there's an error console.log it and redirect home
+    console.log(error)
+    res.redirect('/skills')
+  })
+}
 
 
 export {
   index,
-  newSkill as new
+  newSkill as new,
+  create,
 }
-
-console.log('controllers/skill.js connected');

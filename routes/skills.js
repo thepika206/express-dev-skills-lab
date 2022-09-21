@@ -10,6 +10,9 @@ router.get('/', skillsCtrl.index)
 // GET new skill form /skills/new
 router.get('/new', skillsCtrl.new)
 
+// POST create skill /skills/create
+router.post('/create', skillsCtrl.create)
+
 export {
   router
 }
