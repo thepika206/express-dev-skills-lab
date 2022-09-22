@@ -5,10 +5,10 @@ import { Snack } from '../models/snack.js'
 function index(req,res){
   Snack.find({})
   .then(snacks =>{
+    console.log('snacks here', snacks )
     res.render('snacks/index',{
       snacks: snacks
     })
-    // console.log(res)
   })
   .catch(error => {//if there's an error console.log it and redirect home
     console.log(error)

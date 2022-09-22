@@ -4,6 +4,7 @@ import { Skill } from '../models/skill.js'
 function index (req, res) {
   Skill.find({})
   .then(skills => {//skills rep the result of the query
+    console.log(skills)
     res.render('skills/index', {
       skills: skills, title: 'Skills'
     })
