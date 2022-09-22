@@ -16,6 +16,9 @@ router.get('/:id', skillsCtrl.show)
 // POST create skill /skills/create
 router.post('/create', skillsCtrl.create)
 
+// POST override to DELETE
+router.delete('/:id', skillsCtrl.delete)
+
 export {
   router
 }
