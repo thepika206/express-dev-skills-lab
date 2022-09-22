@@ -11,6 +11,7 @@ import './config/database.js'
 // import routers
 import { router as indexRouter } from './routes/index.js'
 import { router as skillsRouter } from './routes/skills.js'
+import { router as snacksRouter } from './routes/snacks.js'
 
 // set up app
 const app = express()
@@ -35,6 +36,8 @@ app.use(
 // mounted routers
 app.use('/', indexRouter)
 app.use('/skills', skillsRouter)
+app.use('/snacks', snacksRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
