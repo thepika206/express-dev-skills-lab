@@ -11,14 +11,13 @@
   <p id="breadcrumb">
     <a href="/">Home</a>
     ><a href="/skills">Skills</a> 
-    >Details
+    >Edit Skill
   </p>
-  <h1>Skill Details</h1>
-  <a href="/skills/<%= skill._id%>/edit">Edit Skill</a>
-  <p>
-    <a href="/skills/<%= skill._id %>"><%= skill.name %></a>
-    -
-    <%= skill.acquired ? "Acquired" : "Not Acquired" %>
-  </p>
+  <form action="/skills/<%= skill._id %>?_method=PUT" method="POST" autocomplete="off">
+    <label for="new-skill">Skill</label>
+    <input id="new-skill" type="text" name="name" value="<%= skill.name%>">
+  <input type="checkbox" <% skill.acquired ? "checked" : "" %> >
+    <button type="submit">Save Skill</button>
+  </form>
 </body>
 </html>
