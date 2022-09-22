@@ -6,7 +6,8 @@ function index (req, res) {
   .then(skills => {//skills rep the result of the query
     console.log(skills)
     res.render('skills/index', {
-      skills: skills, title: 'Skills'
+      skills: skills,
+      time: req.time
     })
   })
   .catch(error => {//if there's an error console.log it and redirect home
