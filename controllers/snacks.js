@@ -44,6 +44,19 @@ function show(req,res){
   })
 }
 
+function edit(req,res){//similar to handling of show, but a new view
+  Snack.findById(req.params.id)
+  .then(snack => {
+    res.render('snacks/edit', {
+      snack: snack
+    })
+  })
+  .catch(error => {//if there's an error console.log it and redirect home
+    console.log(error)
+    res.redirect('/')
+  })
+}
+
 function deleteSnack(req,res){
   Snack.findByIdAndDelete(req.params.id)
   .then(snack => {
@@ -54,6 +67,10 @@ function deleteSnack(req,res){
     res.redirect('/')
   })
 }
+
+
+
+
 //export functions
 
 export {
@@ -61,5 +78,6 @@ export {
   create,
   newSnack as new,
   show,
-  deleteSnack as delete
+  deleteSnack as delete,
+  edit,
 }

@@ -14,10 +14,13 @@ router.get('/new', snacksCtrl.new)
 // GET show details
 router.get('/:id', snacksCtrl.show)
 
-// POST create action
+// GET a edit details form
+router.get('/:id/edit', snacksCtrl.edit)
 
+// POST create action
 router.post('/', snacksCtrl.create)
 
+// DELETE a snack
 router.delete('/:id', snacksCtrl.delete)
 
 
