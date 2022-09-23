@@ -16,8 +16,11 @@
   <ul>
     <% snacks.forEach(snack => { %>
       <li>
-        <%= snack.quantity %> : <%= snack.description %>
-        <a href="/snacks/<%= snack._id %>/edit">edit</a>
+        
+        <a href="/snacks/<%= snack._id %>">
+          <%= snack.description %>--<%= snack.quantity %>   
+        </a>
+        
       </li>
     <% }) %>
   </ul>

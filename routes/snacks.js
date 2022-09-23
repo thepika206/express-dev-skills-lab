@@ -8,9 +8,13 @@ const router = Router()
 // GET list index
 router.get('/', snacksCtrl.index)
 
+// GET new entry form
 router.get('/new', snacksCtrl.new)
 
-// POST
+// GET show details
+router.get('/:id', snacksCtrl.show)
+
+// POST create action
 
 router.post('/', snacksCtrl.create)
 

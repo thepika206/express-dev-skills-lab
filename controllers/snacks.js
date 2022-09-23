@@ -31,10 +31,23 @@ function create(req,res){
   })
 }
 
+function show(req,res){
+  Snack.findById(req.params.id)
+  .then(snack => {
+    res.render('snacks/show', {
+      snack: snack
+    })
+  })
+  .catch(error => {//if there's an error console.log it and redirect home
+    console.log(error)
+    res.redirect('/')
+  })
+}
 //export functions
 
 export {
   index,
   create,
-  newSnack as new
+  newSnack as new,
+  show
 }
