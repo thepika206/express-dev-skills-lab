@@ -20,6 +20,8 @@ function newSkill (req, res) {
 }
 
 function create (req,res){
+  req.body.acquired = !!req.body.acquired //this sets the aquired property to false as a "default", my new skill submission page doesn't mention it.
+  console.log(req.body)
   Skill.create(req.body)
   .then(skill =>{
     res.redirect('/skills')
@@ -69,6 +71,7 @@ function edit(req, res){
 
 function update(req,res){
   console.log(req.body, 'test body')
+  req.body.acquired = !!req.body.acquired
   Skill.findByIdAndUpdate(req.params.id, req.body, 
   {new: true})
   .then(skill => {

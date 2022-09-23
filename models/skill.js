@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 	
 const skillSchema = new Schema({
   name: String,
-  acquired: Boolean,
+  acquired: Boolean
 })
 
 // Compile the schema into a model and export it

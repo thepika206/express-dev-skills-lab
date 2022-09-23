@@ -13,14 +13,14 @@ router.get('/new', skillsCtrl.new)
 // GET details of skill 
 router.get('/:id', skillsCtrl.show)
 
-// GET edit details
-router.get('/:id/edit', skillsCtrl.edit)
-
 // POST create skill /skills/create
-router.post('/create', skillsCtrl.create)
+router.post('/', skillsCtrl.create)
 
 // POST override to DELETE
 router.delete('/:id', skillsCtrl.delete)
+
+// GET edit details
+router.get('/:id/edit', skillsCtrl.edit)
 
 //PUT
 router.put('/:id', skillsCtrl.update)

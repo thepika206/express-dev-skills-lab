@@ -14,9 +14,10 @@
     >Edit Skill
   </p>
   <form action="/skills/<%= skill._id %>?_method=PUT" method="POST" autocomplete="off">
-    <label for="new-skill">Skill</label>
-    <input id="new-skill" type="text" name="name" value="<%= skill.name%>">
-  <input type="checkbox" <% skill.acquired ? "checked" : "" %> >
+    <label for="skill">skill</label>
+    <input id="skill" type="text" name="name" value="<%= skill.name %>">
+    <label for="acquired">acquired?</label>
+    <input type="checkbox" id="acquired" name="acquired" <%= skill.acquired ? 'checked' : '' %> >
     <button type="submit">Save Skill</button>
   </form>
 </body>
