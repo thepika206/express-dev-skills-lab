@@ -18,6 +18,8 @@ router.get('/:id', snacksCtrl.show)
 
 router.post('/', snacksCtrl.create)
 
+router.delete('/:id', snacksCtrl.delete)
+
 
 //export router for server.js
 

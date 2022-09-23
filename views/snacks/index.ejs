@@ -16,11 +16,16 @@
   <ul>
     <% snacks.forEach(snack => { %>
       <li>
-        
+        <form 
+        action="/snacks/<%= snack._id%>?_method=DELETE"
+        class="delete-form"
+        method="POST"
+        >
+        <button type="submit">X</button>
+        </form>
         <a href="/snacks/<%= snack._id %>">
           <%= snack.description %>--<%= snack.quantity %>   
         </a>
-        
       </li>
     <% }) %>
   </ul>

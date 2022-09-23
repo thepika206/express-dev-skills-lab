@@ -43,11 +43,23 @@ function show(req,res){
     res.redirect('/')
   })
 }
+
+function deleteSnack(req,res){
+  Snack.findByIdAndDelete(req.params.id)
+  .then(snack => {
+    res.redirect('/snacks')
+  })
+  .catch(error => {//if there's an error console.log it and redirect home
+    console.log(error)
+    res.redirect('/')
+  })
+}
 //export functions
 
 export {
   index,
   create,
   newSnack as new,
-  show
+  show,
+  deleteSnack as delete
 }
