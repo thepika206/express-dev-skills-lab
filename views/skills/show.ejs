@@ -15,10 +15,10 @@
   </p>
   <h1>Skill Details</h1>
   <a href="/skills/<%= skill._id%>/edit">Edit Skill</a>
-  <p>
-    <a href="/skills/<%= skill._id %>"><%= skill.name %></a>
+  <h3>
+    <%= skill.name %>
     -
     <%= skill.acquired ? "Acquired" : "Not Acquired" %>
-  </p>
+  </h3>
 </body>
 </html>

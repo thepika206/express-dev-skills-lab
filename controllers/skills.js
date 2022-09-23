@@ -68,6 +68,7 @@ function edit(req, res){
 }
 
 function update(req,res){
+  console.log(req.body, 'test body')
   Skill.findByIdAndUpdate(req.params.id, req.body, 
   {new: true})
   .then(skill => {
