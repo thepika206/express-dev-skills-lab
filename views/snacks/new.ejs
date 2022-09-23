@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="breadcrumb">
+    <a href="/">Home</a>
+    ><a href="/snacks">Snacks</a> 
+    >New Snack
+  </p>
+  <h1>New Snack</h1>
+  <form action="/snacks" method="POST" autocomplete="off">
+    <label for="snack">snack</label>
+    <input id="snack" type="text" name="description">
+    <label for="quantity">quantity</label>
+    <input id="quantity" type="number" name="quantity">
+    <button type="submit">Save</button>
+  </form>
+</body>
+</html>

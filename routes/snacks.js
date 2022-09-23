@@ -8,6 +8,12 @@ const router = Router()
 // GET list index
 router.get('/', snacksCtrl.index)
 
+router.get('/new', snacksCtrl.new)
+
+// POST
+
+router.post('/', snacksCtrl.create)
+
 
 //export router for server.js
 

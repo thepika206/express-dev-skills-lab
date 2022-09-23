@@ -16,8 +16,25 @@ function index(req,res){
   })
 }
 
+function newSnack(req,res){
+  res.render('snacks/new')
+}
+
+function create(req,res){
+  Snack.create(req.body)
+  .then(snack => {
+    res.redirect('/snacks')
+  })
+  .catch(error => {//if there's an error console.log it and redirect home
+    console.log(error)
+    res.redirect('/')
+  })
+}
+
 //export functions
 
 export {
-  index
+  index,
+  create,
+  newSnack as new
 }

@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 	
 const snackSchema = new Schema({
-  name: String,
+  description: String,
   quantity: Number,
 })
 
