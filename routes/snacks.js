@@ -23,6 +23,8 @@ router.post('/', snacksCtrl.create)
 // DELETE a snack
 router.delete('/:id', snacksCtrl.delete)
 
+// PUT update a snack
+router.put('/:id', snacksCtrl.update)
 
 //export router for server.js
 

@@ -31,6 +31,17 @@ function create(req,res){
   })
 }
 
+function update(req,res){
+  Snack.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(snack => {
+    res.redirect(`/snacks/${snack._id}`)
+  })
+  .catch(error => {//if there's an error console.log it and redirect home
+    console.log(error)
+    res.redirect('/')
+  })
+}
+
 function show(req,res){
   Snack.findById(req.params.id)
   .then(snack => {
@@ -80,4 +91,5 @@ export {
   show,
   deleteSnack as delete,
   edit,
+  update
 }

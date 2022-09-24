@@ -12,7 +12,7 @@
     ><a href="/snacks">Snacks</a> 
     >Edit Snack
   </p>
-  <form action="/snacks/" method="PUT" autocomplete="off">
+  <form action="/snacks/<%= snack._id %>?_method=PUT" method="POST" autocomplete="off">
     <label for="snack">snack</label>
     <input id="snack" type="text" name="description" value=" <%= snack.description %>">
     <label for="quantity">quantity</label>
